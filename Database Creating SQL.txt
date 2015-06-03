@@ -1,0 +1,89 @@
+CREATE database lamp_final_project
+
+USE lamp_final_project
+
+
+
+CREATE TABLE Posts 
+
+	(
+
+     post_id int auto_increment primary key, 
+
+     title varchar(100),
+
+     price varchar(50),
+
+     description longtext,
+
+     email varchar(50),
+
+     agreement varchar(255),
+
+     timestamp timestamp,
+
+     image1 varchar(100),
+
+     image2 varchar(100),
+
+     image3 varchar(100),
+
+     image4 varchar(100),
+
+     subcategory_id int,
+
+     location_id int
+
+    );
+
+
+
+CREATE TABLE SubCategory 
+
+	(
+
+     subcategory_id int auto_increment primary key, 
+
+     category_id int,
+
+     subcategory_name varchar(100)
+
+    );
+
+
+
+CREATE TABLE Location 
+
+	(
+
+     location_id int auto_increment primary key, 
+
+     region_id int,
+
+     location_name varchar(100)
+
+    );
+
+
+
+CREATE TABLE Category 
+
+	(
+
+     category_id int auto_increment primary key, 
+
+     category_name varchar(100)
+
+    );
+
+
+
+CREATE TABLE Region 
+
+	(
+
+     region_id int auto_increment primary key, 
+
+     region_name varchar(100)
+
+    );
